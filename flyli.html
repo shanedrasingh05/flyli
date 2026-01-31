@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLYLI – Digital Marketing Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#1e88ff;
+      --cyan:#19d3c5;
+      --purple:#7b4dff;
+      --dark:#0f172a;
+      --light:#f8fafc;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Poppins',sans-serif;
+      color:var(--dark);
+      background:#fff;
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--cyan),var(--blue));
+      color:#fff;
+      padding:4rem 2rem;
+      text-align:left;
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:2rem;
+      align-items:center;
+    }
+    header h1{font-size:3rem;margin-bottom:1rem}
+    header p{font-size:1.1rem;max-width:520px}
+    .btn{
+      display:inline-block;
+      margin-top:1.5rem;
+      padding:.9rem 1.6rem;
+      background:#fff;
+      color:var(--blue);
+      border-radius:999px;
+      font-weight:600;
+      text-decoration:none;
+    }
+    section{padding:4rem 2rem}
+    .container{max-width:1200px;margin:auto}
+    .section-title{text-align:center;font-size:2.2rem;margin-bottom:3rem;color:var(--blue)}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem}
+    .card{background:var(--blue);color:#fff;padding:2rem;border-radius:20px;transition:.3s}
+    .card:hover{transform:translateY(-8px)}
+    .about{background:var(--light);border-radius:24px;padding:3rem}
+    .cta{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#fff;text-align:center;padding:4rem 2rem}
+    footer{background:#0b1220;color:#cbd5e1;padding:3rem 2rem}
+
+    /* Professional Toast styles */
+    .toast{
+      position:fixed;
+      top:24px;
+      right:24px;
+      min-width:260px;
+      background:#ffffff;
+      color:#0f172a;
+      padding:1rem 1.25rem;
+      border-radius:8px;
+      border:1px solid #e5e7eb;
+      box-shadow:0 8px 20px rgba(0,0,0,.08);
+      font-size:.95rem;
+      font-weight:500;
+      opacity:0;
+      transform:translateY(-12px);
+      transition:opacity .3s ease, transform .3s ease;
+      z-index:9999;
+    }
+    .toast.show{opacity:1;transform:translateY(0)}
+    .toast.success{border-left:4px solid #16a34a}
+    .toast.error{border-left:4px solid #dc2626}
+
+    /* Footer styles */
+    .footer{
+      background:#0b1220;
+      color:#cbd5e1;
+      padding:3.5rem 2rem 1.5rem;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:2.5rem;
+      margin-bottom:2rem;
+    }
+    .footer-logo{
+      color:#ffffff;
+      font-size:1.6rem;
+      margin-bottom:.6rem;
+    }
+    .footer-desc{
+      font-size:.95rem;
+      max-width:320px;
+    }
+    .footer h4{
+      color:#ffffff;
+      margin-bottom:.8rem;
+      font-size:1.05rem;
+    }
+    .footer ul{list-style:none}
+    .footer ul li{
+      margin-bottom:.45rem;
+      font-size:.95rem;
+      cursor:pointer;
+    }
+    .footer ul li:hover{color:#ffffff}
+    .footer-bottom{
+      border-top:1px solid #1f2937;
+      padding-top:1rem;
+      text-align:center;
+      font-size:.9rem;
+      color:#94a3b8;
+    }
+
+    @media(max-width:900px){header{grid-template-columns:1fr;text-align:center}}
+(max-width:900px){header{grid-template-columns:1fr;text-align:center}}
+(max-width:900px){header{grid-template-columns:1fr;text-align:center}}
+  </style>
+</head>
+<body>
+
+<header class="container">
+  <div>
+    <h1>Promote Your Business with FLYLI</h1>
+    <p>We help brands grow, engage, and convert through modern digital marketing strategies that actually work.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </div>
+  <img src="/images/1V.png" alt="FLYLI Hero" style="width:100%;max-width:420px;margin:auto" />
+</header>
+
+<section class="container">
+  <h2 class="section-title">Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Meta Ads</h3>
+      <p>High‑converting Facebook & Instagram ad campaigns built to scale your business fast.</p>
+    </div>
+    <div class="card">
+      <h3>Graphic Design</h3>
+      <p>Clean, modern visuals that reflect your brand and capture attention instantly.</p>
+    </div>
+    <div class="card">
+      <h3>Video Editing</h3>
+      <p>Short‑form and promotional videos optimized for engagement and growth.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="about">
+    <h2 class="section-title">About Us</h2>
+    <p>FLYLI is a results‑driven digital marketing agency focused on helping brands stand out online. We combine creativity, strategy, and technology to deliver measurable growth.</p>
+    <p>From startups to established businesses, we tailor our solutions to your goals — helping you fly higher in the digital world.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to Take Your Digital Presence to New Heights?</h2>
+  <p>Contact us today for a free consultation and discover how FLYLI can accelerate your growth.</p>
+</section>
+
+<section id="contact" class="container" style="margin-bottom:4rem">
+  <h2 class="section-title">Contact Us</h2>
+  <form id="contactForm" style="max-width:600px;margin:auto;display:grid;gap:1.2rem">
+    <input type="text" id="name" placeholder="Your Name" required style="padding:1rem;border-radius:12px;border:1px solid #cbd5e1" />
+    <input type="email" id="email" placeholder="Your Email" required style="padding:1rem;border-radius:12px;border:1px solid #cbd5e1" />
+    <input type="text" id="subject" placeholder="Subject" required style="padding:1rem;border-radius:12px;border:1px solid #cbd5e1" />
+    <textarea id="message" rows="4" placeholder="Your Message" required style="padding:1rem;border-radius:12px;border:1px solid #cbd5e1"></textarea>
+    <button type="submit" class="btn" style="border:none;cursor:pointer">Send Message</button>
+    <p id="formStatus" style="text-align:center;font-weight:600"></p>
+  </form>
+</section>
+
+<footer id="contact" class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3 class="footer-logo">FLYLI</h3>
+      <p class="footer-desc">A professional digital marketing agency helping brands grow with performance-driven strategies.</p>
+    </div>
+
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li>Meta Ads</li>
+        <li>Graphic Design</li>
+        <li>Video Editing</li>
+        <li>Brand Strategy</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Careers</li>
+        <li>Privacy Policy</li>
+        <li>Terms & Conditions</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>Email: hello@flyli.com</p>
+      <p>Phone: +91 90000 00000</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 FLYLI. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('contactForm');
+
+  function showToast(message, type = 'success') {
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => toast.classList.add('show'), 100);
+
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => toast.remove(), 400);
+    }, 3000);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !subject || !message) {
+      showToast('Please fill in all fields', 'error');
+      return;
+    }
+
+    if (!email.includes('@')) {
+      showToast('Enter a valid email address', 'error');
+      return;
+    }
+
+    showToast('Message sent successfully!', 'success');
+    form.reset();
+  });
+</script>
+</body>
+</html>
