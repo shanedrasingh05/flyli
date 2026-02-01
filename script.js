@@ -1,0 +1,38 @@
+const form = document.getElementById("contactForm");
+
+function showToast(message, type = "success") {
+  const toast = document.createElement("div");
+  toast.className = `toast ${type}`;
+  toast.textContent = message;
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => toast.classList.add("show"), 100);
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.remove(), 400);
+  }, 3000);
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !subject || !message) {
+    showToast("Please fill in all fields", "error");
+    return;
+  }
+
+  if (!email.includes("@")) {
+    showToast("Enter a valid email address", "error");
+    return;
+  }
+
+  showToast("Message sent successfully!");
+  form.reset();
+});
